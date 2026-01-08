@@ -1,0 +1,112 @@
+[
+    {
+        "question": "Qui fut le premier président de la République de Guinée ?",
+        "choix": [
+            "Sékou Touré",
+            "Lansana Conté",
+            "Alpha Condé",
+            "Ahmed Sékou"
+        ],
+        "bonneReponse": 0,
+        "anecdote": "Sékou Touré a dirigé la Guinée dès 1958 et est reconnu pour son rôle dans l’indépendance et le panafricanisme."
+    },
+    {
+        "question": "Quel chef de guerre guinéen a résisté à la colonisation française ?",
+        "choix": [
+            "Samory Touré",
+            "Sékou Touré",
+            "Lansana Conté",
+            "Alpha Condé"
+        ],
+        "bonneReponse": 0,
+        "anecdote": "Samory Touré a dirigé l’empire Wassoulou et résisté aux forces françaises à la fin du XIXe siècle."
+    },
+    {
+        "question": "Quelle femme guinéenne s’est illustrée dans la lutte pour l’indépendance ?",
+        "choix": [
+            "Camara Laye",
+            "Aminata Diallo",
+            "Aïssatou Diallo",
+            "Annette Mbaye"
+        ],
+        "bonneReponse": 2,
+        "anecdote": "Aïssatou Diallo a participé activement aux mouvements pour l’indépendance et l’émancipation des femmes."
+    },
+    {
+        "question": "Quel footballeur guinéen a marqué l’histoire du football africain ?",
+        "choix": [
+            "Naby Keïta",
+            "Pascal Feindouno",
+            "Ibrahima Traoré",
+            "Mohamed Kaba"
+        ],
+        "bonneReponse": 1,
+        "anecdote": "Feindouno a été un joueur emblématique de l’équipe nationale et a brillé en Europe."
+    },
+    {
+        "question": "Quel écrivain guinéen est célèbre pour son roman 'L’Enfant noir' ?",
+        "choix": [
+            "Camara Laye",
+            "Tierno Monénembo",
+            "Ahmadou Kourouma",
+            "Sékou Touré"
+        ],
+        "bonneReponse": 0,
+        "anecdote": "'L’Enfant noir' est une œuvre autobiographique qui explore la culture et les traditions guinéennes."
+    },
+    {
+        "question": "Quel musicien guinéen est connu pour avoir popularisé la musique mandingue ?",
+        "choix": [
+            "Mory Kanté",
+            "Salif Keïta",
+            "Papa Wemba",
+            "Youssou N'Dour"
+        ],
+        "bonneReponse": 0,
+        "anecdote": "Mory Kanté a connu un succès international avec son hit 'Yéké Yéké' en 1987."
+    },
+    {
+        "question": "Quel explorateur portugais a été le premier Européen à atteindre la Guinée au 15ème siècle ?",
+        "choix": [
+            "Bartolomeu Dias",
+            "Vasco de Gama",
+            "Pedro de Sintra",
+            "Ferdinand Magellan"
+        ],
+        "bonneReponse": 2,
+        "anecdote": "Pedro de Sintra a exploré la côte ouest de l’Afrique et a donné son nom à la région de Guinée."
+    },
+    {
+        "question": "En quelle année la Guinée a-t-elle obtenu son indépendance de la France ?",
+        "choix": [
+            "1956",
+            "1958",
+            "1960",
+            "1963"
+        ],
+        "bonneReponse": 1,
+        "anecdote": "Lors du référendum de 1958, la Guinée a voté 'Non' à la constitution proposée par de Gaulle et a proclamé son indépendance la même année."
+    },
+    {
+        "question": "Comment Lansana Conté est-il arrivé au pouvoir en Guinée ?",
+        "choix": [
+            "Élection démocratique",
+            "Coup d'État en 1984",
+            "Désignation par l'Assemblée nationale",
+            "Succession héréditaire"
+        ],
+        "bonneReponse": 1,
+        "anecdote": "Lansana Conté a pris le pouvoir par un coup d'État militaire en 1984 après la mort de Sékou Touré."
+    },
+    {
+        "question": "Quel système politique Sékou Touré a-t-il instauré après l'indépendance ?",
+        "choix": [
+            "Démocratie multipartite",
+            "Régime de parti unique et orientation socialiste",
+            "Monarchie constitutionnelle",
+            "Administration coloniale"
+        ],
+        "bonneReponse": 1,
+        "anecdote": "Après l'indépendance, Sékou Touré a établi un régime de parti unique dirigé par le Parti démocratique de Guinée (PDG), avec une orientation socialiste."
+    }
+]
