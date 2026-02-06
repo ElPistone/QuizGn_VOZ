@@ -14,36 +14,44 @@ export const state = {
 
 /**
  * @description Tableau contenant les questions du quiz
- * @parameter question - Le texte de la question
- * @parameter choix - Les choix de réponses possibles
- * @parameter bonneReponse - L'index de la bonne réponse dans le tableau des choix
  */
-async function chargerQuestions() {
+export let questions = [];
+
+/**
+ * Fonction pour charger les questions
+ */
+export async function chargerQuestions() {
   try {
-    // Chemin relatif vers votre fichier JSON
-    const reponse = await fetch('data/questions.json');
+    const reponse = await fetch('./data/questions.json');
     
     if (!reponse.ok) {
       throw new Error(`Erreur HTTP: ${reponse.status}`);
     }
     
-    // Convertir la réponse en tableau
     const donnees = await reponse.json();
     
-    // Vérifier et stocker dans un tableau
-    let tableauQuestions = [];
-    
     if (Array.isArray(donnees)) {
-      tableauQuestions = donnees;
+      questions = donnees;
     } else if (typeof donnees === 'object') {
-      // Si c'est un objet unique, le mettre dans un tableau
-      tableauQuestions = [donnees];
-    }    
-    return tableauQuestions;
+      questions = [donnees];
+    } else {
+      questions = [];
+    }
+    
+    console.log(`${questions.length} questions chargées`);
+    return questions;
     
   } catch (erreur) {
     console.error('Erreur de chargement:', erreur);
-    return [];
+    // Questions de secours si le JSON ne charge pas
+    questions = [
+      {
+        "question": "Question test (le JSON n'a pas chargé)",
+        "choix": ["Choix 1", "Choix 2", "Choix 3", "Choix 4"],
+        "bonneReponse": 0,
+        "anecdote": "Le fichier questions.json n'a pas pu être chargé."
+      }
+    ];
+    return questions;
   }
 }
-export const questions = await chargerQuestions()

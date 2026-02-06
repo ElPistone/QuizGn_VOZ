@@ -3,18 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizGn – Étape 11 : mini-quiz(Fonctions)</title>
+    <title>QuizGn – Version 1.0</title>
+    <script type="module" src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <h1>QuizGn</h1>
-  <p>Étape 12 – mini-quiz(Fonctions)</p>
-  <p>
-    Cette étape simule un mini-quiz avec plusieurs questions. <br>
-    Pour pouvoir jouer correctement, <br>
-    Clique sur le bouton "Lancer le quiz" pour démarrer.
-  </p>
-    <button onclick="demarrerQuiz()">Lancer le quiz</button>
+    <nav class="navbar is-dark has-background-link-light">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <h1 class="title is-3">QuizGN</h1>
+            </a>
 
-  <script type="module" src="./js/main.js"></script>
+            <a class="navbar-burger" data-target="navbarMenu" role="button" aria-label="menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start"></div>
+            <div class="navbar-end">
+                <a class="navbar-item" href="about.html">À propos</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="columns mt-3">
+        <div class="column is-2"></div>
+        <div class="column is-8">
+            <div class="box is-centered">
+                <h1 class="title is-2 has-text-centered has-text-link">Quiz sur La Culture de la Guinée</h1>
+                <p class="subtitle has-text-centered is-5">Testez vos connaissances et utilisez vos jokers avec sagesse.</p>
+                <div class="section has-background-link-light my-2 py-5" id="rulesSection">
+                    <div class="content">
+                        <p class="subtitle has-text-link is-3">
+                            <div class="icon">
+                                <i class="fa-solid fa-book"></i>
+                            </div>Règles du jeu
+                        </p>
+                        <ul>
+                            <li><strong>10 questions</strong> sur divers aspects de la culture guinéenne.</li>
+                            <li><strong>3 jokers</strong> pour vous aider : 50/50, appel à un ami, et question bonus.</li>
+                            <li>Vous avez <strong>1 minute</strong> pour répondre à chaque question.</li>
+                            <li>Utilisez vos <strong>jokers</strong> stratégiquement.</li>
+                            <li>Répondez correctement pour gagner des <strong>points bonus</strong>.</li>
+                            <li><strong>Score final</strong> affiché à la fin du quiz.</li>
+                        </ul>
+                        <p>Sachez juste qu'on ne vous fera pas de <strong class="subtitle has-text-link">Cadeaux</strong> !</p>
+                        <div class="has-text-centered mt-5">
+                            <button id="startBtn" class="button is-link is-large is-outlined is-rounded">
+                                <span>Commencer</span>
+                                <span class="icon">
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Quiz section: les questions seront rendues ici -->
+                <div class="section has-background-white my-4 py-5 quiz-section" id="quizSection" style="display:none;">
+                    <div class="content">
+                        <h2 class="title is-4 has-text-link" id="questionNumber">Question</h2>
+                        <p class="subtitle is-5" id="questionText"></p>
+                        <div id="choicesList" class="buttons"></div>
+                        <div id="anecdote" class="box is-light mt-4" style="display:none;"></div>
+                        <div class="level mt-4">
+                            <div class="level-left">
+                                <progress class="progress is-info" id="progressBar" value="0" max="100"></progress>
+                            </div>
+                            <div class="level-right">
+                                <button id="nextBtn" class="button is-primary" style="display:none;">Suivant</button>
+                            </div>
+                        </div>
+                        <div id="result" style="display:none;" class="has-text-centered mt-4"></div>
+                    </div>
+                </div>
+                <div class="subtitle mt-3 mx-6">
+                <progress class="progress is-info" value="1" max="100"></progress>
+                129 Questions jusqu'au certificat (?)
+            </div>
+            </div>
+
+        </div>
+        <div class="column is-2"></div>
+    </div>
+
+
+     
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
+    </script>
 </body>
 </html>
